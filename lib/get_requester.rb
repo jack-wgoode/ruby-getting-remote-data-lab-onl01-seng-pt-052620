@@ -12,15 +12,19 @@ class GetRequester
   end
   
    def get_response_body
-    uri = URI.parse(URL)
+    uri = URI.parse(self.url)
     response = Net::HTTP.get_response(uri)
     response.body
    end
   
   
-  def parse_json 
-    results  = get_response_body.parse
+  def parse_json
+# we use the JSON library to parse the API response into nicely formatted JSON
+  results = JSON.parse(self.get_programs)
+  programs.collect do |program|
+    program["agency"]  
   end
+end
   
   
   
