@@ -19,12 +19,12 @@ class GetRequester
   
   
   
-  def parse_json
-    # get_requester = GetRequester.new(URL)
-    # results = get_requester.parse_json
-    results = self.parse_json
-    results
-  end 
+  # def parse_json
+  #   # get_requester = GetRequester.new(URL)
+  #   # results = get_requester.parse_json
+  #   results = self.parse_json
+  #   results
+  # end 
   
   
   
